@@ -56,6 +56,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.adventure.adventure">
+            function <span class="apidocSignatureSpan"></span>adventure
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.adventure.super_">
             function <span class="apidocSignatureSpan">adventure.</span>super_
             <span class="apidocSignatureSpan">()</span>
@@ -69,6 +78,71 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.adventure" id="apidoc.module.adventure">module adventure</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.adventure.adventure" id="apidoc.element.adventure.adventure">
+        function <span class="apidocSignatureSpan"></span>adventure
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Shop(opts) {
+    if (!(this instanceof Shop)) return new Shop(opts);
+    if (!opts) opts = {};
+    if (typeof opts === 'string') opts = { name: opts };
+
+    this.name = opts.name;
+    this.options = opts;
+
+    if (!this.name) return this._error(
+        'Your adventure must have a name! '
+        + 'Supply an `opts.name` to adventure().'
+    );
+    this.command = opts.command || commandify(this.name);
+
+    this.datadir = opts.datadir || path.resolve(
+        process.env.HOME || process.env.USERPROFILE,
+        '.config/' + this.name
+    );
+    mkdirp.sync(this.datadir);
+
+    this.files = {
+        completed: path.join(this.datadir, 'completed.json'),
+        current: path.join(this.datadir, 'current.json')
+    };
+    this.state = {
+        completed: [],
+        current: null
+    };
+
+    try { this.state.completed = require(this.files.completed) }
+    catch (err) {}
+
+    try { this.state.current = require(this.files.current) }
+    catch (err) {}
+
+    this.colors = opts.colors || {};
+    var c = {
+        pass: [0,255,0],
+        fail: [255,0,0],
+        info: [0,255,255]
+    };
+    var colors = Object.keys(c).reduce(function (acc, key) {
+        acc[key] = '\x1b[38;5;' + x256(c[key]) + 'm';
+        return acc;
+    }, {});
+
+    if (!this.colors.pass) this.colors.pass = colors.pass;
+    if (!this.colors.fail) this.colors.fail = colors.fail;
+    if (!this.colors.info) this.colors.info = colors.info;
+    this.colors.reset = '\x1b[00m';
+
+    this._adventures = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
