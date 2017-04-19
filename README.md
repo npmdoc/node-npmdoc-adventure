@@ -1,9 +1,14 @@
-# api documentation for  [adventure (v2.11.0)](https://github.com/substack/adventure)  [![npm package](https://img.shields.io/npm/v/npmdoc-adventure.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-adventure) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-adventure.svg)](https://travis-ci.org/npmdoc/node-npmdoc-adventure)
+# npmdoc-adventure
+
+#### api documentation for  [adventure (v2.11.0)](https://github.com/substack/adventure)  [![npm package](https://img.shields.io/npm/v/npmdoc-adventure.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-adventure) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-adventure.svg)](https://travis-ci.org/npmdoc/node-npmdoc-adventure)
+
 #### quickly hack together a nodeschool adventure
 
-[![NPM](https://nodei.co/npm/adventure.png?downloads=true)](https://www.npmjs.com/package/adventure)
+[![NPM](https://nodei.co/npm/adventure.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/adventure)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-adventure/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-adventure_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-adventure/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-adventure/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-adventure/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-adventure/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-adventure/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-adventure/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "James Halliday",
-        "email": "mail@substack.net",
         "url": "http://substack.net"
     },
     "bugs": {
@@ -56,13 +60,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "substack",
-            "email": "mail@substack.net"
+            "name": "substack"
         }
     ],
     "name": "adventure",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/substack/adventure.git"
@@ -72,29 +74,6 @@
     },
     "version": "2.11.0"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module adventure](#apidoc.module.adventure)
-1.  [function <span class="apidocSignatureSpan">adventure.</span>super_ ()](#apidoc.element.adventure.super_)
-
-
-
-# <a name="apidoc.module.adventure"></a>[module adventure](#apidoc.module.adventure)
-
-#### <a name="apidoc.element.adventure.super_"></a>[function <span class="apidocSignatureSpan">adventure.</span>super_ ()](#apidoc.element.adventure.super_)
-- description and source-code
-```javascript
-function EventEmitter() {
-  EventEmitter.init.call(this);
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
